@@ -7,3 +7,4 @@ Then perform an ETL
 
 Query the data using HIVE
 
+In order to use 
