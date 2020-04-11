@@ -6,7 +6,7 @@ import com.github.mddarr.kafka.producer.feed.AppConfig;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.CountDownLatch;
 
-public class FeedApiThread {
+public class FeedApiThread implements Runnable {
     private final AppConfig appConfig;
     private  final ArrayBlockingQueue<String> statusQueue;
     private final CountDownLatch latch;
@@ -20,4 +20,8 @@ public class FeedApiThread {
 
     }
 
+    @Override
+    public void run() {
+
+    }
 }
