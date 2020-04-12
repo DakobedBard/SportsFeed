@@ -27,6 +27,21 @@
         </repository>
     </repositories>
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-10 -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming-kafka-0-10_2.12</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.12</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+
+
+
         <dependency>
             <groupId>io.confluent</groupId>
             <artifactId>kafka-avro-serializer</artifactId>
@@ -140,7 +155,7 @@
                     <finalName>uber-${project.artifactId}-${project.version}</finalName>
                     <transformers>
                         <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                            <mainClass>com.github.mddarr.kafka.producer.feed.FeedProducerMain</mainClass>
+                            <mainClass>com.github.mddarr.kafka.producer.feed.Feed</mainClass>
                         </transformer>
                     </transformers>
                 </configuration>
